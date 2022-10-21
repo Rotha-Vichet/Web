@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<link rel="stylesheet" href="stlye.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<body>
+    <div class="container ">
+
+    <div class="heading-center">
+        <h1 class="text-center">Your little story</h1>
+        <h3 class="text-center">you can generate a small story by filling the following form.</h3>
+    </div>
+<div class="container bg-light text-black">
+    <div ng-app="myApp" ng-controller="myCtrl" class="mx-auto">
+
+        First Name: <br> <input type="text" ng-model="firstName" ><br>
+        Last Name: <br> <input type="text" ng-model="lastName"><br>
+        Occupation: <br> <input type="text" ng-model="job"><br>
+        Gender: <br> <input type="text" ng-model="gender" placeholder="Man or Women"><br>
+        Favorite pet: <br> <input type="text" ng-model="pet"><br>
+        Favorite snack: <br> <input type="text" ng-model="snack"><br>
+        Favorite holiday: <br> <input type="text" ng-model="holiday"><br>
+        Ex name: <br> <input type="text" ng-model="ex"><br>
+        Dream country: <br> <input type="text" ng-model="country"><br>
+        <br>
+        <div class="small-box dark-box justify-content-center">
+            <h1 class="text-center text-warning">Let the story begin</h1>
+        <div class="border border-warning p-3 mb-3">
+            My name is {{firstName + " " + lastName}} and I work as {{job}} in the Winner center. As a {{gender}} I enjoy my work as well as happy with my life. That is what I would said to everyone but... Do you really think that everyone is happy with what ever they doing?
+            Sometime I ask myself what is life? (Trying to be a knowledge seeker >.>) Anyway A wise man once said "Every journeyy have its final day, Don't rush" - Zhong Li. Well so for my stressful life I decide to Throw myself in the Freedom of enjoying my vacation! THAT'S RIGHT BABY! VACATION!!!
+            I Gone to {{country}} to get myself a vaction house and then I biught myself a {{pet}}! name it {{ex}} after my Ex. I started to enjouy life! when suddenly a big portal suck me in. That's right a big PORTAL!that you usaully seen in movies! anyway after i got suck into the portal, i found myself 
+            in the middle of a jungle. I then, start explore the area not worry about my own life in peach black darkness... to find a full mountain (Yes a full mountain) of my favorite snack! {{snack}}. and when i pass those tasty snack(which I ate to my full potential) I continue to see a lot of people is celebrating the best holiday ever! {{holiday}}!!
+            It was so much fun I never know that outside of work life which you only go to work then drink then sleep then work have such fun activity. I decided to stay here forever! Well no work siince I am in a portal and I do enjouy my snack which will keep me alive so what the bother?
+            it was heaven until... I woke up and foud myself in the hospital near my house "What the F-!" I exclaimed. The doctor start rushing in and nurse was everywhere. they start asking me all sort of question. After a full check up and 2 days observation I finally release from the hospital. And then i found out i lost my job due to fall into a coma for 6 months.
+            everything of my property was confisticated for dept payment and everything was in chaos for me. the end.
+        </div>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName = "";
+    $scope.lastName = "";
+    $scope.job = "";
+    $scope.pet = "";
+    $scope.snack = "";
+    $scope.holiday = "";
+    $scope.country = "";
+});
+</script>
+</div>
+</body>
+</html>
